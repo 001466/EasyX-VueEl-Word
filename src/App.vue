@@ -3,10 +3,18 @@
 <div id="app">
     <div class="top">
        <wd-row>
-		 <wd-col span="4">  欢迎来到 		</wd-col>
+		     <wd-col span="4">  欢迎来到 		</wd-col>
          <wd-col span="12"> <div class="logo">花漾诗词</div>	</wd-input></wd-col>
-         <wd-col span="4">  黎剑发 		</wd-col>
-         <wd-col span="4">  退出登陆 	</wd-col>
+         <wd-col span="4">  {{account}} 		</wd-col>
+
+         <wd-col span="4">
+            <div v-if="account != null">
+              退出登陆
+            </div>
+            <div v-else>
+              登陆
+            </div>
+         </wd-col>
        </wd-row>
     </div>
 
@@ -36,6 +44,11 @@
 import Word from './components/Word'
 export default {
   name: 'App',
+  data () {
+    return {
+      account: '黎剑发'
+    }
+  },
   components: {
     Word
   }

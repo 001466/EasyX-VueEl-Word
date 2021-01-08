@@ -8,8 +8,11 @@ import router from './router'
 
 import WotDesign from 'wot-design'
 import 'wot-design/lib/theme-default/index.css'
-
 Vue.use(WotDesign)
+
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios,axios);
 
 Vue.config.productionTip = false
 
