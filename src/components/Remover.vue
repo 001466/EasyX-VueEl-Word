@@ -1,19 +1,16 @@
 <template>
 
-<div>
+<div class="remover">
+
+
   <div><h4>{{ title }}</h4></div>
   <div>{{ subtitle }}</div>
 
   <div>
-
-<wd-row>
-  <wd-col span="18"> <wd-input  placeholder="请输入链接"> </wd-input></wd-col>
-  <wd-col span="6"> <wd-button >解析</wd-button> </wd-col>
-</wd-row>
-
-
-
-
+	<wd-row>
+	  <wd-col span="16"> <wd-input  placeholder="请输入链接"> </wd-input></wd-col>
+	  <wd-col span="8"> <wd-button >解析</wd-button> </wd-col>
+	</wd-row>
   </div>
 
   <div>
@@ -42,3 +39,12 @@ export default {
   }
 }
 </script>
+
+
+<style>
+.remover {
+  height:340px;
+  overflow: auto;
+  word-break: break-all;
+}
+</style>
